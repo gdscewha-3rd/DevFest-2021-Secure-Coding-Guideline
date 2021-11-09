@@ -28,10 +28,10 @@ GDSC EWHA | 보안과 함께 하는 개발, 시큐어코딩 하루만에 배워 
 
 가장 **빈번**하게 일어나는 웹 해킹 공격 <br> 웹 어플리케이션 **사용자 입력값**에 **필터링**과 **이스케이프**가 제대로 적용돼 있지 않을 때 발생<br>
 공격자가 **조작된 SQL 질의문을 삽입**해 웹 서버 **DB 정보 열람/유출/조작함**
-[🚀 Learn More](./sql/SQL_Injection.md)
+[🚀 Learn More](./sql/SQL%20Injection.md)
 |JAVA|C|
 |:---:|:---:|
-| [📖](./sql/SQL%20Injection.md#1-%EC%A0%95%EC%9D%98) | [📖](./sql/SQL%20Injection.m#1-%EC%A0%95%EC%9D%98) |
+| [📖](./sql/SQL%20Injection.md#1-%EC%A0%95%EC%9D%98) | [📖](./sql/SQL%20Injection.md#1-%EC%A0%95%EC%9D%98) |
 | [외부 입력 받아 쿼리 생성](./sql/SQL%20Injection.md#%EC%95%88%EC%A0%84%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EC%BD%94%EB%93%9Cjava--tablename%EA%B3%BC-name%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B2%80%EC%A6%9D-%EC%88%98%ED%96%89-x) | [외부 입력 받아 쿼리 생성](./sql/SQL%20Injection.md#%EC%95%88%EC%A0%84%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EC%BD%94%EB%93%9Cc--%EC%99%B8%EB%B6%80-%EC%9E%85%EB%A0%A5%EC%9D%B4-sql-%ED%80%B4%EB%A6%AC%EC%97%90-%EC%96%B4%EB%96%A0%ED%95%9C-%EC%B2%98%EB%A6%AC-%EC%97%86%EC%9D%B4-%EC%82%BD%EC%9E%85%EB%90%A8)|
 | [ID와 Password 추출해 쿼리 생성](./sql/SQL%20Injection.md#%EC%95%88%EC%A0%84%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EC%BD%94%EB%93%9Cjava) | [ID와 Password 추출해 쿼리 생성](./sql/SQL%20Injection.md#%EC%95%88%EC%A0%84%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EC%BD%94%EB%93%9Cc-querystr%EC%9D%98-%EC%99%B8%EB%B6%80-%EC%9E%85%EB%A0%A5%EC%97%90%EC%84%9C-user_id%EC%99%80-password%EC%9D%98-%EA%B0%92%EC%9D%84-%EC%9E%98%EB%9D%BC-%EA%B7%B8%EB%8C%80%EB%A1%9C-sql%EB%AC%B8-%EC%9D%B8%EC%9E%90-%EA%B0%92%EC%9C%BC%EB%A1%9C-%EC%82%AC%EC%9A%A9) |
 | [ Blind SQL injection 공격 구문](./sql/SQL%20Injection.md#6-%EC%98%88%EC%A0%9C-3--blind-sql-injection-%EA%B3%B5%EA%B2%A9-%EA%B5%AC%EB%AC%B8) | . |
@@ -66,14 +66,14 @@ GDSC EWHA | 보안과 함께 하는 개발, 시큐어코딩 하루만에 배워 
 |JAVA|
 |:---:|
 | [📖](./sql/SQL_Injection_mybatis_Data_Map.md#1-%EC%A0%95%EC%9D%98) |
-| [질의문 설정 파일 (XML)](./sql/SQL_Injection_mybatis_Data_Map.md#3-%EC%98%88%EC%A0%9C-%EC%BD%94%EB%93%9C1) |
-|[사용자 소유 정보 가져오기](./sql/SQL_Injection_mybatis_Data_Map.md#4-%EC%98%88%EC%A0%9C2)|
+| [질의문 설정 파일 (XML)](./sql/SQL_Injection_mybatis_Data_Map.md#3-예제1) |
+|[사용자 소유 정보 가져오기](./sql/SQL_Injection_mybatis_Data_Map.md#4-예제2)|
 
 ---
 
 ## ✔️ **XSS 공격 (크로스 사이드 스크립트)**
 
-웹페이지에서 **임의의 스크립트를 실행**시켜 사용자 세션을 가로채거나 웹 사이트 변조, 악의적인 컨텐츠 삽입, 피싱 등을 시도하는 공격 [🚀 Learn More](../xss/README.md)
+웹페이지에서 **임의의 스크립트를 실행**시켜 사용자 세션을 가로채거나 웹 사이트 변조, 악의적인 컨텐츠 삽입, 피싱 등을 시도하는 공격 [🚀 Learn More](./xss/README.md)
 
 |              JAVA               |                C                |
 | :-----------------------------: | :-----------------------------: |
