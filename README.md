@@ -11,16 +11,16 @@ GDSC EWHA | 보안과 함께 하는 개발, 시큐어코딩 하루만에 배워 
 
 # Table of Contents
 
-- [SQL Injection: SQL 삽입](./#%EF%B8%8F-sql-injection--sql-삽입)
-- [SQL Injection: JDO](./#%EF%B8%8F-sql-injection--jdo)
-- [SQL Injection: Persistence](./#%EF%B8%8F-sql-injection--persistence)
-- [SQL Injection: mybatis Data Map](./#%EF%B8%8F-sql-injection--mybatis-data-map)
-- [XSS Attack(크로스 사이드 스크립트)](./#%EF%B8%8F-xss-공격-크로스-사이드-스크립트)
-- [Xquery 삽입](./#%EF%B8%8F-xquery-삽입)
-- [사용자 중요 정보 평문 저장](./#%EF%B8%8F-사용자-중요-정보-평문-저장)
-- [패스워드 평문 저장](./#%EF%B8%8F-패스워드-평문-저장)
-- [오류 메시지를 통한 정보 도출 방지](./#%EF%B8%8F-오류-메시지를-통한-정보-도출-방지)
-- [쿠키를 통한 정보 노출 방지](./#%EF%B8%8F-쿠키를-통한-정보-노출)
+- [SQL Injection: SQL 삽입](https://github.com/gdscewha-3rd/DevFest-2021-Secure-Coding-Guideline#%EF%B8%8F-sql-injection--sql-%EC%82%BD%EC%9E%85)
+- [SQL Injection: JDO](https://github.com/gdscewha-3rd/DevFest-2021-Secure-Coding-Guideline#%EF%B8%8F-sql-injection--jdo)
+- [SQL Injection: Persistence](https://github.com/gdscewha-3rd/DevFest-2021-Secure-Coding-Guideline#%EF%B8%8F-sql-injection--persistence)
+- [SQL Injection: mybatis Data Map](https://github.com/gdscewha-3rd/DevFest-2021-Secure-Coding-Guideline#%EF%B8%8F-sql-injection--mybatis-data-map)
+- [XSS Attack(크로스 사이드 스크립트)](https://github.com/gdscewha-3rd/DevFest-2021-Secure-Coding-Guideline#%EF%B8%8F-xss-%EA%B3%B5%EA%B2%A9-%ED%81%AC%EB%A1%9C%EC%8A%A4-%EC%82%AC%EC%9D%B4%EB%93%9C-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8)
+- [Xquery 삽입](https://github.com/gdscewha-3rd/DevFest-2021-Secure-Coding-Guideline#%EF%B8%8F-xquery-%EC%82%BD%EC%9E%85)
+- [사용자 중요 정보 평문 저장](https://github.com/gdscewha-3rd/DevFest-2021-Secure-Coding-Guideline#%EF%B8%8F-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%A4%91%EC%9A%94-%EC%A0%95%EB%B3%B4-%ED%8F%89%EB%AC%B8-%EC%A0%80%EC%9E%A5)
+- [패스워드 평문 저장](https://github.com/gdscewha-3rd/DevFest-2021-Secure-Coding-Guideline#%EF%B8%8F-%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C-%ED%8F%89%EB%AC%B8-%EC%A0%80%EC%9E%A5)
+- [오류 메시지를 통한 정보 도출 방지](https://github.com/gdscewha-3rd/DevFest-2021-Secure-Coding-Guideline#%EF%B8%8F-%EC%98%A4%EB%A5%98-%EB%A9%94%EC%8B%9C%EC%A7%80%EB%A5%BC-%ED%86%B5%ED%95%9C-%EC%A0%95%EB%B3%B4-%EB%8F%84%EC%B6%9C-%EB%B0%A9%EC%A7%80)
+- [쿠키를 통한 정보 노출 방지](https://github.com/gdscewha-3rd/DevFest-2021-Secure-Coding-Guideline#%EF%B8%8F-%EC%BF%A0%ED%82%A4%EB%A5%BC-%ED%86%B5%ED%95%9C-%EC%A0%95%EB%B3%B4-%EB%85%B8%EC%B6%9C)
 
 ---
 
@@ -31,7 +31,7 @@ GDSC EWHA | 보안과 함께 하는 개발, 시큐어코딩 하루만에 배워 
 [🚀 Learn More](../sql/SQL_Injection.md)
 |JAVA|C|
 |:---:|:---:|
-| [📖](https://github.com/yesyeseo/DevFest-2021-Ewha-Security-Archive/blob/readme/sql/SQL%20Injection.md#1-%EC%A0%95%EC%9D%98) | [📖](https://github.com/yesyeseo/DevFest-2021-Ewha-Security-Archive/blob/readme/sql/SQL%20Injection.md#1-%EC%A0%95%EC%9D%98) |
+| [📖](../sql/SQL%20Injection.md#1-%EC%A0%95%EC%9D%98) | [📖](../sql/SQL%20Injection.m#1-%EC%A0%95%EC%9D%98) |
 | [외부 입력 받아 쿼리 생성](../sql/SQL%20Injection.md#%EC%95%88%EC%A0%84%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EC%BD%94%EB%93%9Cjava--tablename%EA%B3%BC-name%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B2%80%EC%A6%9D-%EC%88%98%ED%96%89-x) | [외부 입력 받아 쿼리 생성](../sql/SQL%20Injection.md#%EC%95%88%EC%A0%84%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EC%BD%94%EB%93%9Cc--%EC%99%B8%EB%B6%80-%EC%9E%85%EB%A0%A5%EC%9D%B4-sql-%ED%80%B4%EB%A6%AC%EC%97%90-%EC%96%B4%EB%96%A0%ED%95%9C-%EC%B2%98%EB%A6%AC-%EC%97%86%EC%9D%B4-%EC%82%BD%EC%9E%85%EB%90%A8)|
 | [ID와 Password 추출해 쿼리 생성](../sql/SQL%20Injection.md#%EC%95%88%EC%A0%84%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EC%BD%94%EB%93%9Cjava) | [ID와 Password 추출해 쿼리 생성](../sql/SQL%20Injection.md#%EC%95%88%EC%A0%84%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EC%BD%94%EB%93%9Cc-querystr%EC%9D%98-%EC%99%B8%EB%B6%80-%EC%9E%85%EB%A0%A5%EC%97%90%EC%84%9C-user_id%EC%99%80-password%EC%9D%98-%EA%B0%92%EC%9D%84-%EC%9E%98%EB%9D%BC-%EA%B7%B8%EB%8C%80%EB%A1%9C-sql%EB%AC%B8-%EC%9D%B8%EC%9E%90-%EA%B0%92%EC%9C%BC%EB%A1%9C-%EC%82%AC%EC%9A%A9) |
 | [ Blind SQL injection 공격 구문](..sql/SQL%20Injection.md#6-%EC%98%88%EC%A0%9C-3--blind-sql-injection-%EA%B3%B5%EA%B2%A9-%EA%B5%AC%EB%AC%B8) | . |
@@ -90,7 +90,6 @@ GDSC EWHA | 보안과 함께 하는 개발, 시큐어코딩 하루만에 배워 
 |JAVA|C|
 |:---:|:---:|
 | [📖](개념링크~~) | [📖](개념링크~~~) |
-|[예제 설명~~](링크~~)|[예제설명~~](링크)|
 
 ---
 
@@ -102,7 +101,7 @@ GDSC EWHA | 보안과 함께 하는 개발, 시큐어코딩 하루만에 배워 
 | :-----------------------------------------------------: | :-------------------------------------------------------------: | :--------------------------------------------------: | :----------------------------------------------------: |
 | [📖](../plaintext/plaintext.md#java-%EC%98%88%EC%A0%9C) | [📖](../plaintext/plaintext.md#android-java-%EC%98%88%EC%A0%9C) | [📖](../plaintext/plaintext.md#c-%EC%98%88%EC%A0%9C) | [📖](../plaintext/plaintext.md#c-%EC%98%88%EC%A0%9C-1) |
 
----
+
 
 ## ✔️ `패스워드` `평문` 저장
 
