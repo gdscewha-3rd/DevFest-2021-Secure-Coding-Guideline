@@ -72,10 +72,26 @@ stmt.setString(2, pwd);
 //입력받은 패스워드가 SHA-256 알고리즘을 통해 해시값으로 저장되어서 안전하다. 
 stmt.executeUpdate();
  ```
-
-<br>
+ <br>
 <details>
-<summary> 사용된 클래스와 메소드</summary>
+<summary>
+💚코드 추가 설명💚
+	</summary>
+<div markdown="1">       
+
+* 클라이언트가 서버에게 무언가를 요청하면 서버는 요청에 해당하는 것을 응답해주는 구조임.
+	
+* 해당 코드는 Servlet 수준에서 사용자의 요청에 대해 파라미터를 통해 사용자 정보를 얻어서 DB에 쿼리를 날려 사용자 정보를 DB에 저장하고 있다. 
+* Servlet : 자바 플랫폼에서 동적인 웹을 개발할 때 사용하는 클래스로, 클라이언트 요청을 처리하고 그 결과를 다시 클라이언트에세 전송하는 서버의 기능을 해주는 자바 프로그램
+
+</div>
+</details>
+<br>
+
+<details>
+<summary>
+💚사용된 클래스와 메소드💚
+	</summary>
 <div markdown="1">       
 
 * request
@@ -89,6 +105,25 @@ stmt.executeUpdate();
 * MessageDigest : 암호화를 위한 클래스<br>
     - [MessageDigest (Java Platform SE 7 )](https://docs.oracle.com/javase/7/docs/api/java/security/MessageDigest.html)
     
+
+</div>
+</details>
+
+<br>
+<details>
+<summary>
+💚SHA-256💚
+	</summary>
+<div markdown="1">       
+
+* 암호화 해시 함수의 한 종류
+	
+* 해시 함수 : 임의의 길이의 정보를 입력으로 받아, 고정된 길이의 암호문(해시값)을 충력하는 암호기술
+* 데이터 전처리, 초기값 설정, 해싱 연산 단계로 이루어져 있음 
+	* 입력된 데이터를 전처리한다. 
+	* 초기값을 설정한다. (초기값 : 알고리즘의 결과로 나올 해시값의 초기값)
+	* 초기값에 입력된 데이터를 이용해 해싱 연산을 수행한다. 
+* [SHA-256 코드](https://seed.kisa.or.kr/kisa/Board/21/detailView.do)
 
 </div>
 </details>
@@ -155,7 +190,7 @@ int dbaccess()
  ```
  <br>
  <details>
-<summary>사용된 함수</summary>
+<summary>💚사용된 함수💚</summary>
 <div markdown="1">   
   
 * [환경 핸들 - ODBC API Reference](https://docs.microsoft.com/ko-kr/sql/odbc/reference/develop-app/allocating-the-environment-handle?view=sql-server-ver15)
@@ -194,6 +229,8 @@ int main(void)
 		
 		...
 		char* dbUserId, * dbUserPassword;
+		
+		//암호화되지 않은 사용자 정보를 그대로 DB연결에 사용하고 있어서 안전하지 못하다. 
 		loadDbUserInfo(&dbUserId, &dbUserPassword);
 		SQLRETURN   retcode = SQLConnect(hdbc, (SQLCHAR*)"173.234.56.78", SQL_NTS, (SQLCHAR*)dbUserId, strlen(dbUserId), dbUserPassword, strlen(dbUserPassword));
 		...
@@ -243,6 +280,8 @@ int main(void)
 		const char * password = GetParameter(queryStr, PASSWORD_PARAM);
 		...
 		char * dbUserId, * dbUserPassword;
+		
+		//loadDbUserInfo를 통해 암호화된 사용자 정보를 DB연결에 사용하고 있다. 
 		loadDbUserInfo(&dbUserId, &dbUserPassword);
 		SQLRETURN   retcode    =    SQLConnect(hdbc,    (SQLCHAR*)    "173.234.56.78",    SQL_NTS, (SQLCHAR*) dbUserId, strlen(dbUserId), dbUserPassword, strlen(dbUserPassword));
 		...
@@ -267,10 +306,41 @@ void loadDbUserInfo(char  **  userId, char ** password)
 }
 ```
 <details>
-<summary>사용된 함수</summary>
+<summary>💚사용된 함수💚</summary>
 <div markdown="1">   
   
-  [RSA_public_encrypt](https://www.openssl.org/docs/man1.0.2/man3/RSA_private_decrypt.html)
+  * [RSA_public_encrypt](https://www.openssl.org/docs/man1.0.2/man3/RSA_private_decrypt.html)
+</div>
+</details>
+<br>
+<details>
+<summary>💚RSA 암호화 알고리즘💚</summary>
+<div markdown="1">   
+  
+* 암호화에 사용하는 키와 복호화에 사용하는 키가 다른 비대칭키 알고리즘
+	
+* 공개키와 개인키를 쌍으로 사용
+	* 공개키 : 외부에 공개할 수 있는 키
+	* 개인키 : 키의 소유자만 알고 있어야 하는 키
+	* 본인 인증의 목적을 가질 때는 개인키로 암호화하고 공개키로 복호화한다.
+	* 기밀성을 목적으로 할 때는 공개키로 암호화하고 개인키로 복호화한다. 
+
+* 공개키와 개인키를 만드는 과정과 모듈러 연산을 통해 암호화, 복호화하는 과정이 필요하다.  
+	
+</div>
+</details>
+ <br>
+ <br>
+<details>
+<summary>출처</summary>
+<div markdown="1">
+『전자정부 SW 개발, 운영자를 위한 C  시큐어 코딩 가이드』, 행정자치부, 한국 인터넷진흥원<br>
+『전자정부 SW 개발, 운영자를 위한 소프트웨어 개발보안 가이드』, 행정안전부, 한국 인터넷진흥원<br>
+https://docs.oracle.com/javaee/7/api/overview-summary.html<br>
+https://docs.microsoft.com/ko-kr/documentation/<br>
+https://seed.kisa.or.kr/kisa/Board/21/detailView.do<br>
+https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html<br>
+https://m.blog.naver.com/ka28/221985380809
 </div>
 </details>
  <br>
