@@ -172,6 +172,15 @@ GDSC EWHA | 보안과 함께 하는 개발, 시큐어코딩 하루만에 배워 
 
 안전행정부, Android-Java 시큐어 코딩 가이드, 2011. 09
 
+행정자치부, 한국 인터넷진흥원, 전자정부 SW 개발, 운영자를 위한 C 시큐어 코딩 가이드
+
 XSS 공격과 대응방안, 디지털정책연구 = The Journal of digital policy & management v.11 no.12, 2013년, pp.327 – 332, 홍성혁 (백석대학교, 정보통신학부 정보보호 전공)
 
 크로스 사이트 스크립팅(XSS) 취약점에 대한 공격과 방어, 디지털융복합연구 = Journal of digital convergence v.13 no.2 , 2015년, pp.177 – 183, 최은정 (서울여자대학교 정보보호학과 )
+
+Oracle Docs, Java(TM) EE 7 Specification APIs
+
+Microsoft, Microsoft 기술 문서
+
+한국인터넷진흥원(KISA), 암호알고리즘 소스코드
+
