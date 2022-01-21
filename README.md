@@ -153,7 +153,7 @@ GDSC EWHA | 보안과 함께 하는 개발, 시큐어코딩 하루만에 배워 
 
 ---
 
-### Organizer
+### Organizers
 
 [**GDSC EWHA**](https://github.com/gdscewha-3rd) | [구민정](https://github.com/mj982) [김소미](https://github.com/rlathal009) [김윤서](https://github.com/ottl-seo)
 [배수현](https://github.com/SoohyeonB)
